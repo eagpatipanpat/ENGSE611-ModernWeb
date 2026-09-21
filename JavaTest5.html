@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ตัวอย่างที่ 5</title>
+</head>
+<body><pre id="output">ผลลัพธ์จะแสดงที่นี่...</pre>
+
+<script>
+    let numbers = [0, 1, 2, 4, 8, 16, 32, 64, 128, 256];
+    let min = numbers[0];
+    let max = numbers[0];
+    let sum = 0;
+
+    // Find min & max
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] < min) min = numbers[i];
+        if (numbers[i] > max) max = numbers[i];
+    }
+
+    // Sum
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    // Average
+    let avg = sum / numbers.length;
+
+    // Console log (แสดงใน Console)
+    console.log("Numbers: " + numbers.join(" "));
+    console.log("Min: " + min);
+    console.log("Max: " + max);
+    console.log("Sum: " + sum);
+    console.log("Average: " + avg);
+
+    // Show on page (แสดงผลบนหน้าเว็บ)
+    document.getElementById("output").textContent = 
+        "Numbers: " + numbers.join(" ") + "\n" +
+        "Min: " + min + "\n" +
+        "Max: " + max + "\n" +
+        "Sum: " + sum + "\n" +
+        "Average: " + avg;
+</script>
+</body>
+</html>
