@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo3</title>
+</head>
+<body>
+
+    <button onclick="runLoop()">Run Code</button>
+    <pre id="output"></pre>
+
+    <script>
+        function runLoop() {
+
+            let maxNumber = 15; 
+            let resultText = "";
+
+            for (let i = 0; i <= maxNumber; i++) {
+                if (i % 2 === 0) {
+                    resultText += i + " (คู่)\n";
+                    console.log(i + " (คู่)"); 
+                } else {
+                    resultText += i + " (คี่)\n";
+                    console.log(i + " (คี่)");
+                }
+            }
+
+            for (let i = 0; i <= maxNumber; i += 2) {
+                resultText += "นับทีละ 2: " + i + "\n";
+                console.log("นับทีละ 2: " + i);
+            }
+
+            for (let i = 10; i >= 0; i--) {
+                resultText += "ถอยหลัง: " + i + "\n";
+                console.log("ถอยหลัง: " + i);
+            }
+            document.getElementById("output").textContent = resultText;
+        }
+    </script>
+
+</body>
+</html>
